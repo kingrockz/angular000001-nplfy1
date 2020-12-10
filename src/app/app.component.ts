@@ -1,11 +1,10 @@
-import { Component, VERSION } from "@angular/core";
-import { User } from "../user";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: "my-app",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  Usermodel = new User("test@gmail.com", "password");
+  title = 'angular000001-nplfy1';
 }
