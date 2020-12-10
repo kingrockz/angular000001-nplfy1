@@ -7,7 +7,7 @@ import { User } from "../user";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  Usermodel = new User("test@gmail.com", "password");
+  Usermodel = new User("", "");
   constructor() { }
 
   ngOnInit(): void {

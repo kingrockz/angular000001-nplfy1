@@ -13,9 +13,13 @@ import { LoginComponent } from './login/login.component';
 import { Routes,RouterModule} from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from "@angular/forms";
+import { ProfileComponent } from './profile/profile.component';
+import {AuthguardServiceService} from './authguard-service.service';
+import {AuthenticationGuard} from './authentication.guard'
 
 const routes : Routes = [
 
+  { path: 'profile', component: ProfileComponent,canActivate:[AuthenticationGuard]},
   {path : 'login',component : LoginComponent},
   {path : 'register',component : RegisterComponent},
 
@@ -27,7 +31,8 @@ const routes : Routes = [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,7 @@ const routes : Routes = [
     FormsModule
   ],
   exports : [RouterModule],
-  providers: [],
+  providers: [AuthguardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
