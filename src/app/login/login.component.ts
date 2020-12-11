@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   private formSubmitAttempt: boolean;
 
-  Usermodel = new User("", "");
+  Usermodel = new User("test@gmail.com ", "test");
 
   constructor(private router: Router) { 
 

@@ -17,6 +17,9 @@ import { ProfileComponent } from './profile/profile.component';
 import {AuthguardServiceService} from './authguard-service.service';
 import {AuthenticationGuard} from './authentication.guard'
 
+import { HttpClientModule } from "@angular/common/http";
+
+
 const routes : Routes = [
 
   { path: 'profile', component: ProfileComponent,canActivate:[AuthenticationGuard]},
@@ -41,7 +44,8 @@ const routes : Routes = [
     MatButtonModule,
     MatIconModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports : [RouterModule],
   providers: [AuthguardServiceService],

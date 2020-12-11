@@ -1,1 +1,30 @@
-<p >Welcome </p>
+<br>
+<h4 style="margin-left:10px">Welcome : {{Email}}</h4>
+
+
+
+    <button style="float:right;margin-right: 10px;" mat-raised-button (click)="logout()" color="accent">Logout</button>
+    
+<div style="margin-right: 10px;margin-left:10px">
+    <br><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>TITLE</th>
+                            <th>DATA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let recipient of data">
+                            <td>{{recipient.id}}</td>
+                          <td>{{recipient.title}}</td>
+                          <td>{{recipient.body}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <script>
+
+            </script>
