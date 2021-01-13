@@ -1,0 +1,23 @@
+<p>view-one works!</p>
+
+<div *ngIf="users">
+
+    <div *ngFor="let user of users">
+
+        
+
+        <div [ngSwitch]="user.gender">
+
+            <div class="MaleDiv" *ngSwitchCase="'m'">
+
+                Name : {{user.name}} , Age : {{user.age}} , Gender : Male
+            </div>
+            <div class="FemaleDiv" *ngSwitchCase="'f'">
+                Name : {{user.name}} , Age : {{user.age}} , Gender : Female
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

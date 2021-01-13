@@ -18,6 +18,8 @@ import {AuthguardServiceService} from './authguard-service.service';
 import {AuthenticationGuard} from './authentication.guard'
 
 import { HttpClientModule } from "@angular/common/http";
+import { ViewOneComponent } from './view-one/view-one.component';
+import { ViewTwoComponent } from './view-two/view-two.component';
 
 
 const routes : Routes = [
@@ -35,7 +37,9 @@ const routes : Routes = [
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    ViewOneComponent,
+    ViewTwoComponent
   ],
   imports: [
     BrowserModule,
