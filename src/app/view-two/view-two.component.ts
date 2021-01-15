@@ -12,4 +12,6 @@ export class ViewTwoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  boostrapclass = "text-primary"
+
 }
